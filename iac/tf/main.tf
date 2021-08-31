@@ -24,12 +24,12 @@ provider "azurerm" {
   features {}
 }
 
-resource "azurerm_key_vault" "adf_kvamartya_prod" {
-  name                        = "<>"
-  location                    = var.resource-location
-  resource_group_name         = var.resource-group-prod
-  enabled_for_disk_encryption = true
-  tenant_id                   = data.azurerm_client_config.current.tenant_id
+#resource "azurerm_key_vault" "adf_kvamartya_prod" {
+ # name                        = "<>"
+ # location                    = var.resource-location
+ # resource_group_name         = var.resource-group-prod
+ # enabled_for_disk_encryption = true
+ # tenant_id                   = data.azurerm_client_config.current.tenant_id
   
   sku_name = "standard"
 
@@ -57,7 +57,7 @@ resource "azurerm_key_vault" "adf_kvamartya_prod" {
 }
 
 resource "azurerm_storage_account" "adf_storage" {
-  name                     = "<>"
+  name                     = "strvdevdemo"
   resource_group_name      = var.resource-group-prod
   location                 = var.resource-location
   account_tier             = "Standard"
