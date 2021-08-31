@@ -12,7 +12,7 @@ data "azurerm_client_config" "current" {}
 terraform {
   backend "remote" {
     hostname = "app.terraform.io"
-    organization = "<>"
+    organization = "pachpolkalyani"
 
     workspaces {
       name = "adf_automation_prod"
